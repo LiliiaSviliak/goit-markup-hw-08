@@ -1,0 +1,220 @@
+/* общий css для index.html и portfolio.html */
+
+/* Футер */
+
+/////
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $footer-background-color;
+
+  .footer.container {
+    display: block;
+  }
+}
+
+.footer-logo {
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: $primary-white-color;
+}
+.footer-logo-item {
+  color: $accent-color;
+}
+.address {
+  font-style: inherit;
+}
+.footer-address {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $primary-white-color;
+}
+.footer-mail {
+  margin-bottom: 8px;
+}
+
+.footer-contacts-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $footer-links-color;
+}
+
+.footer-contacts-title {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $primary-white-color;
+}
+.footer-social-links-list {
+  display: inline-flex;
+  justify-content: space-around;
+}
+.footer-social-links-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social-list-link {
+  @extend %align-center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-social-list-link:hover,
+.footer-social-list-link:focus {
+  background-color: $accent-color;
+}
+
+.footer-social-list-icon {
+  width: 20px;
+  height: 20px;
+  fill: $primary-white-color;
+}
+
+.footer-submit-button {
+  display: block;
+  text-align: center;
+}
+
+.footer-submit-button-container {
+  display: block;
+  text-align: center;
+}
+
+.footer-submit-mail {
+  display: block;
+  width: 450px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: $footer-background-color;
+
+  font-family: $main-font;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.footer-subscription-btn {
+  @extend %align-center;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 200px;
+  height: 50px;
+  text-decoration: none;
+  border: 1px solid $accent-color;
+  background-color: $accent-color;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.footer-subscription-btn-desc {
+  display: flex;
+  margin-right: 10px;
+  width: 109px;
+  height: 30px;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: $primary-white-color;
+  background-color: $accent-color;
+}
+.footer-btn-icon {
+  fill: $primary-white-color;
+}
+
+@media screen and (max-width: 767px) {
+  .footer.container {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+
+  .footer-submit-mail {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-contacts,
+  .footer-join-us {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  .footer-submit-button-container {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .container {
+    display: flex;
+    align-items: baseline;
+  }
+  .footer-contacts {
+    margin-right: 69px;
+  }
+  .footer-logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+  .footer-address,
+  .footer-mail {
+    margin-bottom: 9px;
+  }
+  .footer-join-us {
+    margin-right: 94px;
+  }
+
+  .footer-submit-button {
+    display: flex;
+    align-items: flex-end;
+  }
+  .footer-submit-button-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-submit-mail {
+    margin-right: 12px;
+    width: 358px;
+  }
+}

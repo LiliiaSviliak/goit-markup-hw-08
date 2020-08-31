@@ -1,0 +1,17 @@
+@import "./utils/variables";
+@import "./utils/placeholders";
+@import "./base/normalize";
+@import "./base/general";
+@import "./base/container";
+
+@import "./layout/main-page/page-header";
+
+@import "./layout/main-page/hero-section";
+@import "./components/modal";
+
+@import "./layout/main-page/advantages-section";
+@import "./layout/main-page/examples-section";
+@import "./layout/main-page/team-section";
+@import "./layout/main-page/clients-section";
+
+@import "./layout/main-page/page-footer";

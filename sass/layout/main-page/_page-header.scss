@@ -1,0 +1,259 @@
+/* общий css для index.html и portfolio.html */
+
+/* Шапка */
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.page-header {
+  position: relative;
+  z-index: 100;
+}
+
+.page-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  position: relative;
+  z-index: 100;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 24px;
+  line-height: 1.17;
+  font-family: $secondary-font;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+
+.logo-item {
+  position: relative;
+  color: $accent-color;
+  z-index: 100;
+}
+
+.navigation-list-link {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: $primary-title-color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.navigation-list-link.current {
+  color: $accent-color;
+}
+
+.navigation-list-link.current::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: $accent-color;
+  border-radius: 2px;
+}
+
+.contacts-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: $primary-text-color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.contacts-list-icon {
+  margin-right: 8px;
+  fill: $primary-text-color;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .contacts-link:hover &,
+  .contacts-link:focus & {
+    fill: $accent-color;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-btn {
+    position: relative;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    z-index: 100;
+    outline: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .menu-btn.is-open .icon-burger {
+    display: none;
+  }
+
+  .menu-btn.is-open .icon-close {
+    display: block;
+  }
+
+  .menu-btn.is-open .header {
+    border-bottom: 1px solid #ececec;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .icon-burger,
+  .icon-close {
+    fill: #000000;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .menu-btn:hover &,
+    .menu-btn:focus & {
+      fill: $accent-color;
+    }
+  }
+
+  .icon-close {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-wrapper {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    transform: translateY(-100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+  }
+  .menu-wrapper.is-open {
+    transform: translateY(0);
+  }
+
+  .main-navigation {
+    margin-bottom: 60px;
+  }
+  .navigation-list-item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .navigation-list-link {
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 1.67;
+  }
+
+  .contacts-list-item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .navigation-list-link.current::after {
+    top: 0;
+    left: 0;
+    margin-top: 33px;
+  }
+
+  .contacts-list-item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .contacts-link {
+    font-size: 18px;
+    line-height: 1.67;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 81px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  .main-navigation {
+    margin-right: 84px;
+  }
+  .navigation-list {
+    display: flex;
+    align-items: center;
+  }
+  .navigation-list-item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .menu-btn {
+    display: none;
+  }
+  .menu-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .navigation-list-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+
+  .navigation-list-link.current::after {
+    bottom: 0;
+    left: 0;
+  }
+
+  .contacts-list-item {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .contacts-link {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-right: 93px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+  .contacts-list {
+    display: flex;
+  }
+
+  .contacts-list-item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+
+  .contacts-list-icon {
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,39 @@
+/*Примеры работ*/
+.examples-section {
+  padding-top: 47px;
+  padding-bottom: 94px;
+}
+
+.examples-list {
+  @extend %align-center;
+}
+
+.examples-list-item {
+  position: relative;
+  margin-right: 30px;
+}
+
+.examples-list-name {
+  display: block;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  min-width: 370px;
+  top: 76.2%;
+  background-color: $examples-background-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $primary-white-color;
+}
+
+@media screen and (max-width: 1199px) {
+  .examples-section {
+    display: none;
+  }
+}
