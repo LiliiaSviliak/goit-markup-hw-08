@@ -5,7 +5,9 @@
 }
 
 .advantages-list-item {
-  width: 450px;
+  display: block;
+  width: auto;
+  margin: 0 auto;
 }
 
 .advantages-list-item:not(:last-child) {
@@ -18,8 +20,7 @@
   margin-bottom: 30px;
   padding-top: 25px;
   padding-bottom: 25px;
-  padding-right: 190px;
-  padding-left: 190px;
+  align-items: center;
   border-radius: 4px;
   background-color: $secondary-white-color;
 }
@@ -42,6 +43,12 @@
   color: $primary-text-color;
 }
 
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .advantages-list-item {
+    width: 450px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .advantages-section {
     padding-top: 94px;
@@ -55,8 +62,6 @@
 
   .icon-advantage {
     width: 100%;
-    padding-right: 142px;
-    padding-left: 142px;
   }
 
   .advantages-list-name {
@@ -99,7 +104,5 @@
   .icon-advantage {
     width: 100%;
     height: 120px;
-    padding-right: 100px;
-    padding-left: 100px;
   }
 }

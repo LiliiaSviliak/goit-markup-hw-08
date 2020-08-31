@@ -368,7 +368,7 @@ body {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -942,7 +942,8 @@ img {
 
 .footer-submit-mail {
   display: block;
-  width: 450px;
+  width: auto;
+  margin: 0 auto;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -996,9 +997,12 @@ img {
   fill: #ffffff;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .footer.container {
     display: block;
+  }
+  .footer-submit-mail {
+    width: 450px;
   }
 }
 
@@ -1010,7 +1014,7 @@ img {
     align-items: baseline;
   }
   .footer-submit-mail {
-    margin: 0 auto;
+    width: 450px;
   }
 }
 
