@@ -94,7 +94,7 @@
     flex-wrap: wrap;
   }
 
-  .team-list-item:not(:nth-last-child(-n + 2)) {
+  .team-list-item:nth-last-child(-n + 2) {
     margin-bottom: 30px;
   }
 
@@ -112,8 +112,11 @@
     }
   }
 
-  .team-list-item:not(:last-child) {
-    margin-right: 30px;
+  .team-list-item {
     margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
