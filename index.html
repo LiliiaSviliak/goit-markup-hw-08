@@ -575,14 +575,15 @@
 
     <!--Модальное окно-->
     <div data-modal class="backdrop is-hidden">
+    <div class="modal-form-wrapper">
+      <button data-modal-close type="button" class="modal-close-btn">
+        <svg class="modal-close-btn-svg">
+          <use href="./images/sprite.svg#icon-close-black"></use>
+        </svg>
+      </button>
       
       <form action="#" class="modal-form">
         <h2 class="modal-form-title">Оставьте свои данные, мы вам перезвоним</h2>
-        <button data-modal-close type="button" class="modal-close-btn">
-          <svg class="modal-close-btn-svg">
-              <use href="./images/sprite.svg#icon-close-black"></use>
-          </svg>
-        </button>
         <div class="modal-form-input-wrapper">
           <input type="text" name="user-name" id="user-modal-name" class="modal-form-input" placeholder=" " required="">
           <label for="user-modal-name" class="modal-form-label">Имя</label>
@@ -622,6 +623,7 @@
       
         <button type="submit" class="modal-form-btn">Отправить</button>
       </form>
+    </div>
     </div>
 
    
