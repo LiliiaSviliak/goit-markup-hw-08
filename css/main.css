@@ -1086,6 +1086,9 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
+  .modal-form-wrapper {
+    max-width: 528px;
+  }
   .modal-form {
     width: 528px;
   }
